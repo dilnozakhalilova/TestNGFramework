@@ -2,7 +2,7 @@
 <testng-results ignored="2" total="5" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-23T21:06:52 EST" name="Smoke Test Suite" finished-at="2023-02-23T21:07:03 EST" duration-ms="11352">
+  <suite started-at="2023-02-23T21:38:30 EST" name="Smoke Test Suite" finished-at="2023-02-23T21:38:41 EST" duration-ms="11325">
     <groups>
       <group name="smoke">
         <method signature="LoginTest.validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" name="validAdminLogin" class="com.exelenter.testcases.LoginTest"/>
@@ -10,25 +10,25 @@
         <method signature="LoginTest.validUserInvalidPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" name="validUserInvalidPassword" class="com.exelenter.testcases.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-02-23T21:06:52 EST" name="Smoke Test" finished-at="2023-02-23T21:07:03 EST" duration-ms="11352">
+    <test started-at="2023-02-23T21:38:30 EST" name="Smoke Test" finished-at="2023-02-23T21:38:41 EST" duration-ms="11325">
       <class name="com.exelenter.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:06:52 EST" name="setUp" finished-at="2023-02-23T21:06:55 EST" duration-ms="2814" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:38:30 EST" name="setUp" finished-at="2023-02-23T21:38:33 EST" duration-ms="2672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:06:55 EST" name="validAdminLogin" finished-at="2023-02-23T21:06:57 EST" duration-ms="1407" status="PASS">
+        <test-method signature="validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:38:33 EST" name="validAdminLogin" finished-at="2023-02-23T21:38:34 EST" duration-ms="1303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validAdminLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:06:57 EST" name="tearDown" finished-at="2023-02-23T21:06:59 EST" duration-ms="2146" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:38:35 EST" name="tearDown" finished-at="2023-02-23T21:38:37 EST" duration-ms="2145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:06:59 EST" name="setUp" finished-at="2023-02-23T21:07:01 EST" duration-ms="1695" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:38:37 EST" name="setUp" finished-at="2023-02-23T21:38:38 EST" duration-ms="1483" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validUserAnEmptyPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:07:01 EST" name="validUserAnEmptyPassword" finished-at="2023-02-23T21:07:01 EST" duration-ms="262" status="FAIL">
+        <test-method signature="validUserAnEmptyPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:38:38 EST" name="validUserAnEmptyPassword" finished-at="2023-02-23T21:38:39 EST" duration-ms="260" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -69,11 +69,11 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validUserAnEmptyPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:07:01 EST" name="tearDown" finished-at="2023-02-23T21:07:03 EST" duration-ms="2135" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:38:39 EST" name="tearDown" finished-at="2023-02-23T21:38:41 EST" duration-ms="2129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="validUserInvalidPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:07:03 EST" name="validUserInvalidPassword" finished-at="2023-02-23T21:07:03 EST" depends-on-methods="com.exelenter.testcases.LoginTest.validUserAnEmptyPassword" duration-ms="0" status="SKIP">
+        <test-method signature="validUserInvalidPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@5ae50ce6]" started-at="2023-02-23T21:38:41 EST" name="validUserInvalidPassword" finished-at="2023-02-23T21:38:41 EST" depends-on-methods="com.exelenter.testcases.LoginTest.validUserAnEmptyPassword" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method com.exelenter.testcases.LoginTest.validUserInvalidPassword() on instance com.exelenter.testcases.LoginTest@5ae50ce6 depends on not successfully finished methods 

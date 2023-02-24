@@ -25,9 +25,10 @@ public class BaseClass extends CommonMethods {
         switch (ConfigsReader.getProperties("browser").toLowerCase()) {
             case "chrome" -> {
                 System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless");     // <== Run in headless mode
-                driver = new ChromeDriver(options);
+//                ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--headless");     // <== Run in headless mode(suitable for regression)
+//                driver = new ChromeDriver(options);
+                driver = new ChromeDriver();
             }
 
             case "firefox" -> {
