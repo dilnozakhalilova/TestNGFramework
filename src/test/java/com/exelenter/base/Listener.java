@@ -13,6 +13,7 @@ import org.testng.ITestResult;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.concurrent.TimeUnit;
 
 public class Listener implements ITestListener {
     ExtentSparkReporter reporter;
@@ -78,24 +79,28 @@ public class Listener implements ITestListener {
     public void onFinish(ITestContext context) {
         System.out.println("\n********************************************\n=== End of Test === " + context.getName() + " |  " + context.getEndDate());
         reports.flush();        // Erases previous (old) data and creates new one.
-        endTime = Instant.now();
+        Instant endTime = Instant.now();
         Duration totalTime = Duration.between(startTime, endTime);
-        long milliSeconds = totalTime.toMillis();
-        System.out.println("Total Test time in milliseconds: " + milliSeconds);
+        int milliseconds = totalTime.getNano()/1_000_000;
 
-        int milliseconds = totalTime.toMillisPart();
+//        long seconds = TimeUnit.MILLISECONDS.toSeconds(totalTime.toMillis());
+//        long minutes = TimeUnit.MILLISECONDS.toMinutes(totalTime.toMillis());
+//        long hours = TimeUnit.MILLISECONDS.toHours(totalTime.toMillis());
+//        long days = TimeUnit.MILLISECONDS.toDays(totalTime.toMillis());
+
         long seconds = totalTime.toSeconds();
         long minutes = totalTime.toMinutes();
         long hours = totalTime.toHours();
         long days = totalTime.toDays();
 
-        System.out.println("Total Test Completion Time:\nDays: " + days +
-                                                       "\nHours: " + hours +
-                                                       "\nMinutes: " + minutes +
-                                                       "\nSeconds: " + seconds +
-                                                       "\nMilliseconds: " + milliseconds);
 
+        System.out.println("\nTotal Test Completion Time: \nDays: " + days +
+                "\nHours: " + hours +
+                "\nMinutes: " + minutes +
+                "\nSeconds: " + seconds +
+                "\nMilliseconds: " + milliseconds);
 
+        System.out.printf("Total Test Completion Time: %d Minutes %d Seconds, and %3d Milliseconds", minutes, seconds, milliseconds);
     }
 
 }
