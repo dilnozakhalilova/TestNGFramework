@@ -11,10 +11,15 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.time.Duration;
+import java.time.Instant;
+
 public class Listener implements ITestListener {
     ExtentSparkReporter reporter;
     ExtentReports reports;
     ExtentTest test;
+    Instant startTime;
+    Instant endTime;
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -32,7 +37,7 @@ public class Listener implements ITestListener {
         // Only failed cases are recommended to avoid too many images( if 500 test cases for example)
         test.addScreenCaptureFromPath(CommonMethods.takeScreenshot("PASS/" + result.getName()));
 
-        test.log(Status.PASS,"Test Passed. This is coming from the Log status");
+        test.log(Status.PASS, "Test Passed. This is coming from the Log status");
     }
 
     @Override
@@ -64,6 +69,7 @@ public class Listener implements ITestListener {
         reporter.config().setReportName("Exelenter Project Test report");  // This will show in the top right corner of report Dashboard.
         reports = new ExtentReports();
         reports.attachReporter(reporter);
+        startTime = Instant.now();
 
 
     }
@@ -72,6 +78,24 @@ public class Listener implements ITestListener {
     public void onFinish(ITestContext context) {
         System.out.println("\n********************************************\n=== End of Test === " + context.getName() + " |  " + context.getEndDate());
         reports.flush();        // Erases previous (old) data and creates new one.
+        endTime = Instant.now();
+        Duration totalTime = Duration.between(startTime, endTime);
+        long milliSeconds = totalTime.toMillis();
+        System.out.println("Total Test time in milliseconds: " + milliSeconds);
+
+        int milliseconds = totalTime.toMillisPart();
+        long seconds = totalTime.toSeconds();
+        long minutes = totalTime.toMinutes();
+        long hours = totalTime.toHours();
+        long days = totalTime.toDays();
+
+        System.out.println("Total Test Completion Time:\nDays: " + days +
+                                                       "\nHours: " + hours +
+                                                       "\nMinutes: " + minutes +
+                                                       "\nSeconds: " + seconds +
+                                                       "\nMilliseconds: " + milliseconds);
+
+
     }
 
 }
