@@ -83,15 +83,15 @@ public class Listener implements ITestListener {
         Duration totalTime = Duration.between(startTime, endTime);
         int milliseconds = totalTime.getNano()/1_000_000;
 
-//        long seconds = TimeUnit.MILLISECONDS.toSeconds(totalTime.toMillis());
-//        long minutes = TimeUnit.MILLISECONDS.toMinutes(totalTime.toMillis());
-//        long hours = TimeUnit.MILLISECONDS.toHours(totalTime.toMillis());
-//        long days = TimeUnit.MILLISECONDS.toDays(totalTime.toMillis());
+       long seconds = TimeUnit.MILLISECONDS.toSeconds(totalTime.toMillis());
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(totalTime.toMillis());
+        long hours = TimeUnit.MILLISECONDS.toHours(totalTime.toMillis());
+        long days = TimeUnit.MILLISECONDS.toDays(totalTime.toMillis());
 
-        long seconds = totalTime.toSeconds();
-        long minutes = totalTime.toMinutes();
-        long hours = totalTime.toHours();
-        long days = totalTime.toDays();
+        // long seconds = totalTime.toSeconds();   <== if you use this one, it will NOT auto wrap after each 60 seconds, instead prints total.
+        //long minutes = totalTime.toMinutes();
+        //long hours = totalTime.toHours();
+        //long days = totalTime.toDays();
 
 
         System.out.println("\nTotal Test Completion Time: \nDays: " + days +
