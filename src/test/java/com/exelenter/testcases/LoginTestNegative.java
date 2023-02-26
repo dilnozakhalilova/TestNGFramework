@@ -1,6 +1,7 @@
 package com.exelenter.testcases;
 
 import com.exelenter.base.BaseClass;
+import org.testng.annotations.Test;
 
 
 /*
@@ -29,6 +30,15 @@ Acceptance Criteria:
 Make a matrix to make your job easier
  */
 public class LoginTestNegative extends BaseClass {
+    // Retrieve data using both local DataProvider OR from Excel by changing the name for DataProvider attribute
+
+    @Test
+    public void userLogin(String username,String password, String expectedErrorMessage){
+        loginPage.loginToWebsite(username,password);
+
+    }
+
+
 
 
 }
