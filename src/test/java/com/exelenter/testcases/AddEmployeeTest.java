@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 
 public class AddEmployeeTest extends BaseClass {
-    @Test(groups = "smoke",enabled = false)
+    @Test(groups ={"smoke","regression"} )
     void addEmployeeTest() {
-        loginPage.loginToWebsite("username","password");
+        loginPage.loginToWebsite(ConfigsReader.getProperties("username"),ConfigsReader.getProperties("password"));
         pimPage.navigateToAddEmployee();
         System.out.println("New employee ID: " + addEmployeePage.employeeId.getAttribute("value"));
         addEmployeePage.addEmployee(ConfigsReader.getProperties("empFirstName"),ConfigsReader.getProperties("empLastName"),ConfigsReader.getProperties("filePath")); // This method will add a new employee

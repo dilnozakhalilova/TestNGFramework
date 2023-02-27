@@ -1,6 +1,11 @@
 package com.exelenter.testcases;
 
 import com.exelenter.base.BaseClass;
+import com.exelenter.utils.Constants;
+import com.exelenter.utils.ExcelUtility;
+import lombok.Data;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
@@ -32,13 +37,30 @@ Make a matrix to make your job easier
 public class LoginTestNegative extends BaseClass {
     // Retrieve data using both local DataProvider OR from Excel by changing the name for DataProvider attribute
 
-    @Test
-    public void userLogin(String username,String password, String expectedErrorMessage){
-        loginPage.loginToWebsite(username,password);
-
+    @Test(dataProvider = "loginDataFromExcel")
+    public void userLogin(String username, String password, String expectedErrorMessage) {
+        loginPage.loginToWebsite(username, password);
+        Assert.assertEquals(loginPage.loginErrorMessage.getText(), expectedErrorMessage, "Error message is incorrect");
     }
 
+    @DataProvider
+    public Object[][]loginDataFromExcel(){
+        return ExcelUtility.readFromExcel(Constants.TESTDATA_FILEPATH,"NegativeLoginTest");
+    }
 
+    @DataProvider(name = "negativeLogin")
+    public Object[][] getData() {
+        return new Object[][]{
+                {"Admin", "invalidPass", "Invalid credentials"},
+                {"admi123", "Exelent2022Sdet!", "Invalid credentials"},
+                {"admi123", "invalidPass", "Invalid credentials"},
+                {"Admin", "", "Password cannot be empty"},
+                {"Admin123", "", "Password cannot be empty"},
+                {"", "invalidPass", "Username cannot be empty"},
+                {"", "invalidPass", "Username cannot be empty"},
+                {"", "", "Username cannot be empty"},
+        };
+    }
 
 
 }

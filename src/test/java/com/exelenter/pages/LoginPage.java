@@ -35,7 +35,6 @@ public class LoginPage extends BaseClass {
         PageFactory.initElements(driver, this);   // this==> refering to clas name ==>_02_LoginPageWithPageFactory.class
 
     }
-
     public void loginToWebsite(String user, String pswd){
 //        sendText(username, ConfigsReader.getProperties(user));
 //        sendText(password,ConfigsReader.getProperties(pswd));

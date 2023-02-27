@@ -8,19 +8,19 @@
         <packages>
             <package name="com.exelenter.testcases"/>
         </packages>
-<!--        <classes>-->
-<!--            <class name="com.exelenter.testcases.AddEmployeeTest">-->
-<!--                <methods>-->
-<!--                    <include name="addEmployeeTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="com.exelenter.testcases.LoginTest">-->
-<!--                <methods>-->
-<!--                    <include name="validAdminLogin"/>-->
-<!--                    <include name="validUserInvalidPassword"/>-->
-<!--                    <include name="validUserAnEmptyPassword"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
+        <classes>
+            <class name="com.exelenter.testcases.AddEmployeeTest">
+                <methods>
+                    <include name="addEmployeeTest"/>
+                </methods>
+            </class>
+            <class name="com.exelenter.testcases.LoginTest">
+                <methods>
+                    <include name="validAdminLogin"/>
+                    <include name="validUserInvalidPassword"/>
+                    <include name="validUserAnEmptyPassword"/>
+                </methods>
+            </class>
+        </classes>
     </test>
 </suite>

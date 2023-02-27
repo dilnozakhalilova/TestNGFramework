@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="TestNGFramework(failed)">
     <classes>
-      <class name="com.exelenter.testcases.LoginTest">
+      <class name="com.exelenter.testcases.AddEmployeeFromExcel">
         <methods>
+          <include name="addEmployeeTest" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="validUserInvalidPassword"/>
-          <include name="validUserAnEmptyPassword"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.exelenter.testcases.LoginTest -->
+      </class> <!-- com.exelenter.testcases.AddEmployeeFromExcel -->
     </classes>
   </test> <!-- TestNGFramework(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

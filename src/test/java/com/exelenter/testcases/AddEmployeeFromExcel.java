@@ -1,6 +1,7 @@
 package com.exelenter.testcases;
 
 import com.exelenter.base.BaseClass;
+import com.exelenter.utils.ConfigsReader;
 import com.exelenter.utils.ExcelUtility;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -26,9 +27,10 @@ import static org.testng.Assert.assertEquals;
               XML file.
  */
 public class AddEmployeeFromExcel extends BaseClass {
-    @Test(dataProvider = "readFromExcel",groups = {"smoke","regression","excel"},enabled = false)
+
+    @Test(dataProvider = "readFromExcel",groups ={ "regression","excel"})
     public void addEmployeeTest(String firstName, String lastName, String username, String password) {
-        loginPage.loginToWebsite("username", "password");  // Log in to website
+        loginPage.loginToWebsite(ConfigsReader.getProperties("username"), ConfigsReader.getProperties("password"));  // Log in to website
         wait(1);
         pimPage.navigateToAddEmployee();
         wait(1);

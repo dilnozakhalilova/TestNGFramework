@@ -19,7 +19,7 @@ public class LoginTest extends BaseClass {
     @Test(groups = "smoke")
     public void validAdminLogin() {
                                                  // Happy path
-        loginPage.loginToWebsite("username","password");
+        loginPage.loginToWebsite(ConfigsReader.getProperties("username"),ConfigsReader.getProperties("password"));
         String expectedText = "Welcome Admin";
         String actualText = dashboardPage.welcome.getText();
         Assert.assertEquals(expectedText, actualText, "'Welcome Admin' text is incorrect");
@@ -42,7 +42,7 @@ public class LoginTest extends BaseClass {
         String expectedErrorMessage ="Password cannot be empty";
         sendText(loginPage.username, ConfigsReader.getProperties("username"));   // Valid username, Password empty(skipped)
         clickButWaitForClickability(loginPage.loginBtn);
-        Assert.fail();  // < I am intentionally failing this test for the report.
+        //Assert.fail();  // < I am intentionally failing this test for the report.
         Assert.assertEquals(loginPage.loginErrorMessage.getText(),expectedErrorMessage,"Error message is incorrect. Test failed.");
     }
 
