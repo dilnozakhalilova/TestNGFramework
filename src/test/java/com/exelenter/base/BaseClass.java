@@ -8,6 +8,7 @@ import com.exelenter.utils.ConfigsReader;
 import com.exelenter.utils.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -22,6 +23,7 @@ public class BaseClass extends CommonMethods {
 
     @BeforeMethod(alwaysRun = true)
     public static void setUp() {
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
         ConfigsReader.loadProperties(Constants.CONFIGURATION_FILEPATH); // Replaced hard-coded filePath with Constants
         String headless = ConfigsReader.getProperties("headless");
 
