@@ -11,10 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 import static com.exelenter.base.BaseClass.driver;
 
@@ -306,7 +303,7 @@ public class CommonMethods extends PageInitializer {
     }
 
     /**
-     * Method will take a screenshot when called. Extension defined as .png( You can change to .jpeg from CommonMethods when needed)
+     * Method will take a screenshot when called using older version of Selenium (v3). Extension defined as .png( You can change to .jpeg from CommonMethods when needed)
      *
      * @param fileName String as a fileName(Screenshot name)
      */
@@ -321,6 +318,21 @@ public class CommonMethods extends PageInitializer {
             System.out.println("Screenshot is not taken");
         }
         return fileName;
+    }
+
+    /**
+     * This method will take a screenshot based on the given WebElement.
+     * @param element which its screenshot needs to be taken
+     * @param fileName screenshot file name, defaulted to .png format( can be changed to .jpeg within the method if needed).
+     * @return .png file as a String
+     */
+    public static String takeScreenshot(WebElement element, String fileName){
+        File sourceFile = element.getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(sourceFile, new File("screenshots/" + fileName +"_"+ getTimeStamp() + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }return fileName;
     }
 
     /**
