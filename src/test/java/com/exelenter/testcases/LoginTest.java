@@ -18,15 +18,14 @@ public class LoginTest extends BaseClass {
 
     @Test(groups = "smoke")
     public void validAdminLogin() {
-                                                 // Happy path
-        loginPage.loginToWebsite(ConfigsReader.getProperties("username"),ConfigsReader.getProperties("password"));
+        // Happy path
+        loginPage.loginToWebsite(ConfigsReader.getProperties("username"), ConfigsReader.getProperties("password"));
         String expectedText = "Welcome Admin";
         String actualText = dashboardPage.welcome.getText();
         Assert.assertEquals(expectedText, actualText, "'Welcome Admin' text is incorrect");
-
     }
 
-    @Test(groups = "smoke",dependsOnMethods = "validUserAnEmptyPassword")
+    @Test(groups = "smoke", dependsOnMethods = "validUserAnEmptyPassword")
     public void validUserInvalidPassword() {
         String invalidPassword = "Pass1234";
         String expectedErrorMessage = "Invalid credentials";
@@ -39,11 +38,11 @@ public class LoginTest extends BaseClass {
 
     @Test(groups = "smoke")
     public void validUserAnEmptyPassword() {
-        String expectedErrorMessage ="Password cannot be empty";
+        String expectedErrorMessage = "Password cannot be empty";
         sendText(loginPage.username, ConfigsReader.getProperties("username"));   // Valid username, Password empty(skipped)
         clickButWaitForClickability(loginPage.loginBtn);
         //Assert.fail();  // < I am intentionally failing this test for the report.
-        Assert.assertEquals(loginPage.loginErrorMessage.getText(),expectedErrorMessage,"Error message is incorrect. Test failed.");
+        Assert.assertEquals(loginPage.loginErrorMessage.getText(), expectedErrorMessage, "Error message is incorrect. Test failed.");
     }
 
 

@@ -9,7 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -336,6 +338,12 @@ public class CommonMethods extends PageInitializer {
             passWord += rnd.nextInt(10);
         }
         return passWord;
+    }
+    public static String getTimeStamp(){
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss_SS"); // YYYY-MM-DD_Hours_Min_Sec_Millisec.
+                                                                         //2023-02-27_local time
+        return simpleDateFormat.format(date.getTime());
     }
 
 

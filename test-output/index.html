@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,16 +104,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_Suite" title="com.exelenter.testcases.LoginTest" class="method navigator-link" hash-for-method="validAdminLogin">validAdminLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="com.exelenter.testcases.LoginTest" class="method navigator-link" hash-for-method="validUserAnEmptyPassword">validUserAnEmptyPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="com.exelenter.testcases.LoginTest" class="method navigator-link" hash-for-method="validUserInvalidPassword">validUserInvalidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -141,20 +131,6 @@
                   <span class="method-name">validAdminLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validUserAnEmptyPassword">
-                  </a> <!-- validUserAnEmptyPassword -->
-                  <span class="method-name">validUserAnEmptyPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validUserInvalidPassword">
-                  </a> <!-- validUserInvalidPassword -->
-                  <span class="method-name">validUserInvalidPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_Suite-class-passed -->
         </div> <!-- panel Default_Suite -->
@@ -169,7 +145,11 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;TestNGFramework&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.exelenter.testcases.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.exelenter.testcases.LoginTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;validAdminLogin&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.exelenter.testcases.LoginTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestNGFramework --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -200,14 +180,6 @@
                 <span class="method-in-group-name">validAdminLogin</span>
                 <br/>
               </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">validUserAnEmptyPassword</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">validUserInvalidPassword</span>
-                <br/>
-              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -225,24 +197,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validAdminLogin')
 data.setCell(0, 2, 'com.exelenter.testcases.LoginTest')
-data.setCell(0, 3, 1291);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validUserInvalidPassword')
-data.setCell(1, 2, 'com.exelenter.testcases.LoginTest')
-data.setCell(1, 3, 987);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validUserAnEmptyPassword')
-data.setCell(2, 2, 'com.exelenter.testcases.LoginTest')
-data.setCell(2, 3, 276);
+data.setCell(0, 3, 1375);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -257,9 +221,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.exelenter.testcases.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">validUserAnEmptyPassword</span>
+                <br/>
+                <span class="ignored-method-name">validUserInvalidPassword</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_Suite" class="panel">
@@ -275,35 +248,11 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validAdminLogin</span>
-                <span class="method-start">6077 ms</span>
+                <span class="method-start">2632 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7370 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">9460 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validUserAnEmptyPassword</span>
-                <span class="method-start">10828 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">11105 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">13242 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validUserInvalidPassword</span>
-                <span class="method-start">14722 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">15709 ms</span>
+                <span class="method-start">4009 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
