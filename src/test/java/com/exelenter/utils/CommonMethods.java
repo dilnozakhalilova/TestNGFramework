@@ -293,7 +293,6 @@ public class CommonMethods extends PageInitializer {
 
     /**
      * Method will scroll both vertically (left and right) and horizontaly ( up & Down) based on given pixels.
-     *
      * @param horizontalPixel int
      * @param verticatPixel   int
      */
@@ -304,7 +303,6 @@ public class CommonMethods extends PageInitializer {
 
     /**
      * Method will take a screenshot when called using older version of Selenium (v3). Extension defined as .png( You can change to .jpeg from CommonMethods when needed)
-     *
      * @param fileName String as a fileName(Screenshot name)
      */
     public static String takeScreenshot(String fileName) {
