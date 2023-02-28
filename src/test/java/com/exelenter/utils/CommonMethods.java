@@ -19,7 +19,6 @@ import java.util.Set;
 import static com.exelenter.base.BaseClass.driver;
 
 
-
 /**
  * NOTE: This is our Bank for reusing methods elsewhere in the framework when we need it.
  * We stote all common methods for usability here. This will help us to avoid DRY principle of programming/coding.
@@ -273,9 +272,10 @@ public class CommonMethods extends PageInitializer {
 
     // more methods related to JS
 
-    public static  JavascriptExecutor jsExecuter(){
-        return   (JavascriptExecutor) driver;
+    public static JavascriptExecutor jsExecuter() {
+        return (JavascriptExecutor) driver;
     }
+
     /**
      * Method performs simple click based on Java script. Use this when regular Selenium click fails
      *
@@ -296,8 +296,9 @@ public class CommonMethods extends PageInitializer {
 
     /**
      * Method will scroll both vertically (left and right) and horizontaly ( up & Down) based on given pixels.
+     *
      * @param horizontalPixel int
-     * @param verticatPixel int
+     * @param verticatPixel   int
      */
 
     public static void scrollToElement(int horizontalPixel, int verticatPixel) {
@@ -306,6 +307,7 @@ public class CommonMethods extends PageInitializer {
 
     /**
      * Method will take a screenshot when called. Extension defined as .png( You can change to .jpeg from CommonMethods when needed)
+     *
      * @param fileName String as a fileName(Screenshot name)
      */
     public static String takeScreenshot(String fileName) {
@@ -313,7 +315,7 @@ public class CommonMethods extends PageInitializer {
         File sourceFile = takeScreenshot.getScreenshotAs(OutputType.FILE);   // actual value from the website
 
         try {
-            FileUtils.copyFile(sourceFile, new File("screenshots/"+fileName+".png"));// changing png to jpeg, make sure you rename dashboars2.. or it will override previous screen
+            FileUtils.copyFile(sourceFile, new File("screenshots/" + fileName +"_"+ getTimeStamp() + ".png"));// changing png to jpeg, make sure you rename dashboars2.. or it will override previous screen
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Screenshot is not taken");
@@ -325,13 +327,13 @@ public class CommonMethods extends PageInitializer {
      * Random Password creater
      */
 
-    public static String randomStrongPassWord(){
+    public static String randomStrongPassWord() {
         String passWord = "";
         Random rnd = new Random();
         String lowerLetter = "abcdefghijklmnoprstuwxyz";
         String capitalLetters = "ABCDEFGHIJKLMNOPRSTUWXYZ";
         String specialChar = "!#$%&()*+,-.:;<=>?@[]^_{|}~";
-        while (passWord.length() < 12){
+        while (passWord.length() < 12) {
             passWord += lowerLetter.charAt(rnd.nextInt(lowerLetter.length()));
             passWord += capitalLetters.charAt(rnd.nextInt(capitalLetters.length()));
             passWord += specialChar.charAt(rnd.nextInt(specialChar.length()));
@@ -339,10 +341,11 @@ public class CommonMethods extends PageInitializer {
         }
         return passWord;
     }
-    public static String getTimeStamp(){
+
+    public static String getTimeStamp() {
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss_SS"); // YYYY-MM-DD_Hours_Min_Sec_Millisec.
-                                                                         //2023-02-27_local time
+        //2023-02-27_local time
         return simpleDateFormat.format(date.getTime());
     }
 

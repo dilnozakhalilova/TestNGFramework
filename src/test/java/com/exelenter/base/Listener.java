@@ -36,7 +36,7 @@ public class Listener implements ITestListener {
 
         // Optionally you can capture a screenshot for each success test case(Not recommended!).
         // Only failed cases are recommended to avoid too many images( if 500 test cases for example)
-        test.addScreenCaptureFromPath(CommonMethods.takeScreenshot("PASS/" + result.getName()));
+        //test.addScreenCaptureFromPath(CommonMethods.takeScreenshot("PASS/" + result.getName()));
 
         test.log(Status.PASS, "Test Passed. This is coming from the Log status");
     }
