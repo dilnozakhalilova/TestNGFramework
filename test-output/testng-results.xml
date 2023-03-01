@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-27T22:25:39 EST" name="Default Suite" finished-at="2023-02-27T22:25:46 EST" duration-ms="6952">
+  <suite started-at="2023-02-28T21:53:09 EST" name="Default Suite" finished-at="2023-02-28T21:53:09 EST" duration-ms="58">
     <groups>
-      <group name="smoke">
-        <method signature="LoginTest.validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@63a65a25]" name="validAdminLogin" class="com.exelenter.testcases.LoginTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-02-27T22:25:39 EST" name="TestNGFramework" finished-at="2023-02-27T22:25:46 EST" duration-ms="6952">
-      <class name="com.exelenter.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@63a65a25]" started-at="2023-02-27T22:25:39 EST" name="setUp" finished-at="2023-02-27T22:25:42 EST" duration-ms="2977" status="PASS">
+    <test started-at="2023-02-28T21:53:09 EST" name="TestNGFramework" finished-at="2023-02-28T21:53:09 EST" duration-ms="58">
+      <class name="com.exelenter.testcases.SampleTesting">
+        <test-method signature="print()[pri:0, instance:com.exelenter.testcases.SampleTesting@1df82230]" started-at="2023-02-28T21:53:09 EST" name="print" finished-at="2023-02-28T21:53:09 EST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@63a65a25]" started-at="2023-02-27T22:25:42 EST" name="validAdminLogin" finished-at="2023-02-27T22:25:43 EST" duration-ms="1722" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validAdminLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@63a65a25]" started-at="2023-02-27T22:25:43 EST" name="tearDown" finished-at="2023-02-27T22:25:46 EST" duration-ms="2198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.exelenter.testcases.LoginTest -->
+        </test-method> <!-- print -->
+      </class> <!-- com.exelenter.testcases.SampleTesting -->
     </test> <!-- TestNGFramework -->
   </suite> <!-- Default Suite -->
 </testng-results>
