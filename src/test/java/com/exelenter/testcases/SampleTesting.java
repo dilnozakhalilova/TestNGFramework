@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 public class SampleTesting {
     @Test
-    public void print(){
-        System.out.println("Hello");
-        System.out.println("Hi");
+
+    public static void printHi(){
+        System.out.println("Testing the system");
     }
 }
