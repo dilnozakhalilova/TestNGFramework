@@ -10,6 +10,7 @@ com\exelenter\testcases\AddEmployeeFromExcel.class
 com\exelenter\pages\AddEmployeePage.class
 com\exelenter\utils\ConfigsReader.class
 com\exelenter\base\Listener.class
+com\exelenter\testcases\SampleTesting.class
 com\exelenter\testcases\LoginTestNegative.class
 com\exelenter\utils\CommonMethods.class
 com\exelenter\pages\DashboardPage.class

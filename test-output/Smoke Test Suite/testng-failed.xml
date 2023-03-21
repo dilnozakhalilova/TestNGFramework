@@ -14,10 +14,19 @@
       <class name="com.exelenter.testcases.LoginTest">
         <methods>
           <include name="tearDown"/>
-          <include name="validAdminLogin"/>
+          <include name="validUserInvalidPassword"/>
+          <include name="validUserAnEmptyPassword"/>
           <include name="setUp"/>
+          <include name="validAdminLogin"/>
         </methods>
       </class> <!-- com.exelenter.testcases.LoginTest -->
+      <class name="com.exelenter.testcases.AddEmployeeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="addEmployeeTest"/>
+        </methods>
+      </class> <!-- com.exelenter.testcases.AddEmployeeTest -->
     </classes>
   </test> <!-- Smoke Test(failed) -->
 </suite> <!-- Failed suite [Smoke Test Suite] -->

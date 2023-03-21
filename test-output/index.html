@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="com.exelenter.testcases.SampleTesting" class="method navigator-link" hash-for-method="printHi">printHi</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="com.exelenter.testcases.LoginTest" class="method navigator-link" hash-for-method="print">print</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.exelenter.testcases.SampleTesting</span>
+              <span class="class-name">com.exelenter.testcases.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="printHi">
-                  </a> <!-- printHi -->
-                  <span class="method-name">printHi</span>
+                  <a name="print">
+                  </a> <!-- print -->
+                  <span class="method-name">print</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,7 +145,11 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;TestNGFramework&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.exelenter.testcases.SampleTesting&quot;/&gt;
+      &lt;class name=&quot;com.exelenter.testcases.LoginTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;print&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.exelenter.testcases.LoginTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestNGFramework --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -187,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'printHi')
-data.setCell(0, 2, 'com.exelenter.testcases.SampleTesting')
-data.setCell(0, 3, 8);
+data.setCell(0, 1, 'print')
+data.setCell(0, 2, 'com.exelenter.testcases.LoginTest')
+data.setCell(0, 3, 1);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 ms</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -209,9 +213,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.exelenter.testcases.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">validAdminLogin</span>
+                <br/>
+                <span class="ignored-method-name">validUserInvalidPassword</span>
+                <br/>
+                <span class="ignored-method-name">validUserAnEmptyPassword</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_Suite" class="panel">
@@ -220,11 +235,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.exelenter.testcases.SampleTesting</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">printHi</span>
+              <div class="chronological-class-name">com.exelenter.testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">print</span>
+                <span class="method-start">6692 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6695 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

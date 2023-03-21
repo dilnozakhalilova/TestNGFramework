@@ -1,68 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="6" passed="4" failed="0" skipped="0">
+<testng-results ignored="3" total="7" passed="3" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-27T22:18:44 EST" name="Smoke Test Suite" finished-at="2023-02-27T22:19:06 EST" duration-ms="22019">
+  <suite started-at="2023-03-18T15:30:52 EDT" name="Smoke Test Suite" finished-at="2023-03-18T15:31:23 EDT" duration-ms="30531">
     <groups>
       <group name="regression">
-        <method signature="AddEmployeeTest.addEmployeeTest()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@34a3d150]" name="addEmployeeTest" class="com.exelenter.testcases.AddEmployeeTest"/>
+        <method signature="AddEmployeeTest.addEmployeeTest()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@5c6648b0]" name="addEmployeeTest" class="com.exelenter.testcases.AddEmployeeTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="LoginTest.validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" name="validAdminLogin" class="com.exelenter.testcases.LoginTest"/>
-        <method signature="LoginTest.validUserAnEmptyPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" name="validUserAnEmptyPassword" class="com.exelenter.testcases.LoginTest"/>
-        <method signature="LoginTest.validUserInvalidPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" name="validUserInvalidPassword" class="com.exelenter.testcases.LoginTest"/>
-        <method signature="AddEmployeeTest.addEmployeeTest()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@34a3d150]" name="addEmployeeTest" class="com.exelenter.testcases.AddEmployeeTest"/>
+        <method signature="LoginTest.validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" name="validAdminLogin" class="com.exelenter.testcases.LoginTest"/>
+        <method signature="LoginTest.validUserAnEmptyPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" name="validUserAnEmptyPassword" class="com.exelenter.testcases.LoginTest"/>
+        <method signature="LoginTest.validUserInvalidPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" name="validUserInvalidPassword" class="com.exelenter.testcases.LoginTest"/>
+        <method signature="AddEmployeeTest.addEmployeeTest()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@5c6648b0]" name="addEmployeeTest" class="com.exelenter.testcases.AddEmployeeTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-02-27T22:18:44 EST" name="Smoke Test" finished-at="2023-02-27T22:19:06 EST" duration-ms="22019">
+    <test started-at="2023-03-18T15:30:52 EDT" name="Smoke Test" finished-at="2023-03-18T15:31:23 EDT" duration-ms="30531">
       <class name="com.exelenter.testcases.AddEmployeeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@34a3d150]" started-at="2023-02-27T22:18:44 EST" name="setUp" finished-at="2023-02-27T22:18:47 EST" duration-ms="2661" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@5c6648b0]" started-at="2023-03-18T15:30:53 EDT" name="setUp" finished-at="2023-03-18T15:30:59 EDT" duration-ms="6623" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: failed to change window state to 'maximized', current state is 'minimized'
+  (Session info: MicrosoftEdge=111.0.1661.44)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [4f304ae9cbbfba0987435bea3a62b4d7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.44, ms:edgeOptions: {debuggerAddress: localhost:49690}, msedge: {msedgedriverVersion: 111.0.1661.44 (fc2a57ec5a41..., userDataDir: C:\Program Files\scoped_dir...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49690/devtoo..., se:cdpVersion: 111.0.1661.44, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f304ae9cbbfba0987435bea3a62b4d7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: failed to change window state to 'maximized', current state is 'minimized'
+  (Session info: MicrosoftEdge=111.0.1661.44)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [4f304ae9cbbfba0987435bea3a62b4d7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.44, ms:edgeOptions: {debuggerAddress: localhost:49690}, msedge: {msedgedriverVersion: 111.0.1661.44 (fc2a57ec5a41..., userDataDir: C:\Program Files\scoped_dir...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49690/devtoo..., se:cdpVersion: 111.0.1661.44, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f304ae9cbbfba0987435bea3a62b4d7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:954)
+at com.exelenter.base.BaseClass.setUp(BaseClass.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addEmployeeTest()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@34a3d150]" started-at="2023-02-27T22:18:47 EST" name="addEmployeeTest" finished-at="2023-02-27T22:18:51 EST" duration-ms="3577" status="PASS">
+        <test-method signature="addEmployeeTest()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@5c6648b0]" started-at="2023-03-18T15:30:59 EDT" name="addEmployeeTest" finished-at="2023-03-18T15:30:59 EDT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: failed to change window state to 'maximized', current state is 'minimized'
+  (Session info: MicrosoftEdge=111.0.1661.44)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [4f304ae9cbbfba0987435bea3a62b4d7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.44, ms:edgeOptions: {debuggerAddress: localhost:49690}, msedge: {msedgedriverVersion: 111.0.1661.44 (fc2a57ec5a41..., userDataDir: C:\Program Files\scoped_dir...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49690/devtoo..., se:cdpVersion: 111.0.1661.44, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f304ae9cbbfba0987435bea3a62b4d7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: failed to change window state to 'maximized', current state is 'minimized'
+  (Session info: MicrosoftEdge=111.0.1661.44)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [4f304ae9cbbfba0987435bea3a62b4d7, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 111.0.1661.44, ms:edgeOptions: {debuggerAddress: localhost:49690}, msedge: {msedgedriverVersion: 111.0.1661.44 (fc2a57ec5a41..., userDataDir: C:\Program Files\scoped_dir...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49690/devtoo..., se:cdpVersion: 111.0.1661.44, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f304ae9cbbfba0987435bea3a62b4d7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:954)
+at com.exelenter.base.BaseClass.setUp(BaseClass.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmployeeTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@34a3d150]" started-at="2023-02-27T22:18:51 EST" name="tearDown" finished-at="2023-02-27T22:18:53 EST" duration-ms="2184" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.AddEmployeeTest@5c6648b0]" started-at="2023-03-18T15:30:59 EDT" name="tearDown" finished-at="2023-03-18T15:31:02 EDT" duration-ms="2275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.exelenter.testcases.AddEmployeeTest -->
       <class name="com.exelenter.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:18:53 EST" name="setUp" finished-at="2023-02-27T22:18:54 EST" duration-ms="1412" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:02 EDT" name="setUp" finished-at="2023-03-18T15:31:06 EDT" duration-ms="3973" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:18:54 EST" name="validAdminLogin" finished-at="2023-02-27T22:18:55 EST" duration-ms="1313" status="PASS">
+        <test-method signature="validAdminLogin()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:06 EDT" name="validAdminLogin" finished-at="2023-03-18T15:31:08 EDT" duration-ms="2079" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validAdminLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:18:55 EST" name="tearDown" finished-at="2023-02-27T22:18:58 EST" duration-ms="2193" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:08 EDT" name="tearDown" finished-at="2023-03-18T15:31:10 EDT" duration-ms="2239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:18:58 EST" name="setUp" finished-at="2023-02-27T22:18:59 EST" duration-ms="1389" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:10 EDT" name="setUp" finished-at="2023-03-18T15:31:13 EDT" duration-ms="3557" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validUserAnEmptyPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:18:59 EST" name="validUserAnEmptyPassword" finished-at="2023-02-27T22:18:59 EST" duration-ms="287" status="PASS">
+        <test-method signature="validUserAnEmptyPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:13 EDT" name="validUserAnEmptyPassword" finished-at="2023-03-18T15:31:14 EDT" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validUserAnEmptyPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:18:59 EST" name="tearDown" finished-at="2023-02-27T22:19:02 EST" duration-ms="2176" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:14 EDT" name="tearDown" finished-at="2023-03-18T15:31:16 EDT" duration-ms="2243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:19:02 EST" name="setUp" finished-at="2023-02-27T22:19:03 EST" duration-ms="1390" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:16 EDT" name="setUp" finished-at="2023-03-18T15:31:20 EDT" duration-ms="3515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validUserInvalidPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:19:03 EST" name="validUserInvalidPassword" finished-at="2023-02-27T22:19:04 EST" depends-on-methods="com.exelenter.testcases.LoginTest.validUserAnEmptyPassword" duration-ms="960" status="PASS">
+        <test-method signature="validUserInvalidPassword()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:20 EDT" name="validUserInvalidPassword" finished-at="2023-03-18T15:31:21 EDT" depends-on-methods="com.exelenter.testcases.LoginTest.validUserAnEmptyPassword" duration-ms="1080" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validUserInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@6f1de4c7]" started-at="2023-02-27T22:19:04 EST" name="tearDown" finished-at="2023-02-27T22:19:06 EST" duration-ms="2153" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@128d2484]" started-at="2023-03-18T15:31:21 EDT" name="tearDown" finished-at="2023-03-18T15:31:23 EDT" duration-ms="2202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

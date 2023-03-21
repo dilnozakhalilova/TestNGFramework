@@ -45,5 +45,10 @@ public class LoginTest extends BaseClass {
         Assert.assertEquals(loginPage.loginErrorMessage.getText(), expectedErrorMessage, "Error message is incorrect. Test failed.");
     }
 
+    @Test
+    public void print(){
+        System.out.println("Hi");
+    }
+
 
 }
