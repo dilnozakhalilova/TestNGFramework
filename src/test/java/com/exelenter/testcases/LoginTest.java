@@ -46,6 +46,8 @@ public class LoginTest extends BaseClass {
     }
 
 
-
-
+@Test
+public void printHi(){
+    System.out.println("Hi");
+}
 }
