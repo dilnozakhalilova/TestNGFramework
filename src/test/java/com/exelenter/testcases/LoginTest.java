@@ -49,7 +49,6 @@ public class LoginTest extends BaseClass {
 @Test
 public void printHi(){
     System.out.println("Hi");
-    System.out.println("Test");
-    System.out.println("testing");
+
 }
 }
