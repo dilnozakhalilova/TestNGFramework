@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-20T21:30:30 EDT" name="Default Suite" finished-at="2023-03-20T21:30:39 EDT" duration-ms="8975">
+  <suite started-at="2023-06-08T21:08:29 EDT" name="Default Suite" finished-at="2023-06-08T21:08:29 EDT" duration-ms="57">
     <groups>
     </groups>
-    <test started-at="2023-03-20T21:30:30 EDT" name="TestNGFramework" finished-at="2023-03-20T21:30:39 EDT" duration-ms="8975">
-      <class name="com.exelenter.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exelenter.testcases.LoginTest@2ddc8ecb]" started-at="2023-03-20T21:30:30 EDT" name="setUp" finished-at="2023-03-20T21:30:37 EDT" duration-ms="6689" status="PASS">
+    <test started-at="2023-06-08T21:08:29 EDT" name="TestNGFramework" finished-at="2023-06-08T21:08:29 EDT" duration-ms="57">
+      <class name="com.exelenter.testcases.SampleTesting">
+        <test-method signature="printHello()[pri:0, instance:com.exelenter.testcases.SampleTesting@290d210d]" started-at="2023-06-08T21:08:29 EDT" name="printHello" finished-at="2023-06-08T21:08:29 EDT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="print()[pri:0, instance:com.exelenter.testcases.LoginTest@2ddc8ecb]" started-at="2023-03-20T21:30:37 EDT" name="print" finished-at="2023-03-20T21:30:37 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- print -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exelenter.testcases.LoginTest@2ddc8ecb]" started-at="2023-03-20T21:30:37 EDT" name="tearDown" finished-at="2023-03-20T21:30:39 EDT" duration-ms="2232" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.exelenter.testcases.LoginTest -->
+        </test-method> <!-- printHello -->
+      </class> <!-- com.exelenter.testcases.SampleTesting -->
     </test> <!-- TestNGFramework -->
   </suite> <!-- Default Suite -->
 </testng-results>

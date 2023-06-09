@@ -8,4 +8,9 @@ public class SampleTesting {
     public static void printHi(){
         System.out.println("Testing the system");
     }
+
+    @ Test
+    public static void printHello(){
+        System.out.println("Hello i am back");
+    }
 }
